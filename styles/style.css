@@ -15,12 +15,22 @@
 */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  color: var(--font-color);
   /* background: url('../images/background.png') 0 0 / 4px 4px, linear-gradient(180deg, #E7E7E7 0%, #1A1A1A 100%); */
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
+  background-image: repeating-linear-gradient(
+    to left,
+    transparent 0 2px,
+     #d3d3d3 2px 4px
+  ),
+  repeating-linear-gradient(to bottom, transparent 0 2px, #d3d3d3 2px 4px),
+  linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  background-position: left 1px top 2px;
+  background-size: cover;
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--font-weight-normal);
-  color: var(--font-color);
 }
 
 .header {
