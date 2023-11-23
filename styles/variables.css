@@ -13,5 +13,4 @@
   --bg-gradients: repeating-linear-gradient(to left, transparent 0 2px, var(--bg-gradient-color) 2px 4px),
     repeating-linear-gradient(to bottom, transparent 0 2px, var(--bg-gradient-color) 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-  --accent-nav-color: rgb(0 0 0 / 60%);
 }
