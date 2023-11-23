@@ -70,6 +70,20 @@
   background-color: transparent;
 }
 
+.theme-menu__button:disabled {
+  position: relative;
+  color: var(--accent-nav-color);
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  color: var(--accent-nav-color);
+  left: -12px;
+  top: 0;
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
 .card {
   background-color: var(--bg-color);
   margin-bottom: 50px;
