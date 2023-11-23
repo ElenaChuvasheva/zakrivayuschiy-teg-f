@@ -68,11 +68,23 @@
   font-size: 14px;
   text-transform: uppercase;
   background-color: transparent;
+  transition: opacity 0.3s;
+  transition-timing-function: ease;
+}
+
+.theme-menu__button:focus {
+  outline: 1px solid red;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
 }
 
 .theme-menu__button:disabled {
   position: relative;
   opacity: 0.6;
+  cursor: initial;
+  pointer-events: none;
 }
 
 .theme-menu__button:disabled::before {
@@ -108,7 +120,6 @@
   right: 13px;
   z-index: 2;
   opacity: 0.5;
-  opacity: 0.5;
   font-family: var(--accent-font), Arial, Helvetica, sans-serif;
   font-size: 14px;
   text-shadow:
@@ -128,10 +139,6 @@
 }
 
 .card__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
   width: 100%;
 }
 
