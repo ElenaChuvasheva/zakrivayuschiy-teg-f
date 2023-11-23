@@ -72,8 +72,25 @@
   transition-timing-function: ease;
 }
 
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  margin-top: 0;
+  background-color: currentColor;
+  transition: color 0.3s, width 0.3s;
+}
+
 .theme-menu__button:focus {
-  outline: 1px solid red;
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus:not(:active)::after,
+.theme-menu__button:focus-visible:not(:active)::after {
+  width: 100%;
+  opacity: 0.6;
 }
 
 .theme-menu__button:hover {
