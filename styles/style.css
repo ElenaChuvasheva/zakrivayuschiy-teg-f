@@ -18,7 +18,6 @@
   color: var(--font-color);
   font-family: var(--main-font), Arial, Helvetica, sans-serif;
   background-image: var(--bg-gradients);
-  background-position: left 3px top 2px;
   background-size: cover;
   background-attachment: fixed;
   min-inline-size: 320px;
@@ -83,12 +82,10 @@
 }
 
 .theme-menu__button:focus {
-  outline: none;
   opacity: 0.6;
 }
 
-.theme-menu__button:focus:not(:active)::after,
-.theme-menu__button:focus-visible:not(:active)::after {
+.theme-menu__button:focus-visible::after {
   width: 100%;
   opacity: 0.6;
 }
@@ -115,10 +112,10 @@
 
 .card {
   margin-bottom: 50px;
-  background-color: var(--bg-color);
   padding-bottom: 27px;
   outline: var(--border-style);
   outline-offset: -2px;
+  background-color: var(--bg-color);
 }
 
 .card__header {
@@ -132,6 +129,11 @@
 
 .image-wrapper {
   position: relative;
+}
+
+.card__image {
+  object-fit: cover;
+  object-position: center;
 }
 
 .watermark {
@@ -175,8 +177,8 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: end;
-  padding-right: 27px;
   gap: 12px;
+  padding-right: 27px;
 }
 
 .card__icon-button {
@@ -184,14 +186,53 @@
 }
 
 .card__like-button {
-  font-family: var(--accent-font);
+  padding-top: 12px;
+  padding-bottom: 9px;
   font-size: 14px;
   line-height: 0.9;
-  padding: 12px 35px 9px 35px;
-  border: var(--border-style);
-  align-self: start;
 }
 
+.bordered-button {
+  position: relative;
+  border: var(--border-style);
+  font-family: var(--accent-font);
+  width: 130px;
+  box-shadow: none;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.button__text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s ease-in-out;
+}
+
+.bordered-button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 0%;
+  height: 100%;
+  margin-top: 0;
+  background-color: var(--font-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.bordered-button:focus-visible {
+  box-shadow: 2px 2px var(--font-color);
+}
+
+.bordered-button:hover::after {
+  width: 100%;
+}
+
+.bordered-button:hover .button__text {
+  color: var(--bg-color);
+  mix-blend-mode: difference;
+}
 
 @media (width <= 375px) {
   .html-decor {
