@@ -116,6 +116,9 @@
 .card {
   margin-bottom: 50px;
   background-color: var(--bg-color);
+  padding-bottom: 27px;
+  outline: var(--border-style);
+  outline-offset: -2px;
 }
 
 .card__header {
@@ -162,11 +165,33 @@
 .card__text {
   display: grid;
   gap: 27px;
-  padding: 21px 29px 27px 27px;
+  padding: 21px 29px 25px 27px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16667;
 }
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
+  padding-right: 27px;
+  gap: 12px;
+}
+
+.card__icon-button {
+  margin-top: 5px;
+}
+
+.card__like-button {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+  padding: 12px 35px 9px 35px;
+  border: var(--border-style);
+  align-self: start;
+}
+
 
 @media (width <= 375px) {
   .html-decor {
