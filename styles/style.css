@@ -177,12 +177,8 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: end;
-  gap: 12px;
+  gap: 7px;
   padding-right: 27px;
-}
-
-.card__icon-button {
-  margin-top: 5px;
 }
 
 .card__like-button {
@@ -232,6 +228,16 @@
 .bordered-button:hover .button__text {
   color: var(--bg-color);
   mix-blend-mode: difference;
+}
+
+.card__icon-button {
+  border: 2px solid transparent;
+  padding: 5px 3px 0;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--border-style);
 }
 
 @media (width <= 375px) {
