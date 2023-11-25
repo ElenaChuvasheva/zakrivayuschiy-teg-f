@@ -157,13 +157,13 @@
   mix-blend-mode: hard-light;
 }
 
-/* @supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
+@supports((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
   .watermark {
       text-shadow: none;
       -webkit-text-stroke: 1px var(--bg-color);
       text-stroke: 1px var(--bg-color);
   }
-} */
+}
 
 .card__text {
   display: grid;
@@ -406,8 +406,8 @@
   filter: contrast(1.5) hue-rotate(75deg);
 }
 
-.filter__saturate {
-  filter: brightness(1.5) grayscale(1);
+.filter__saturate-grayscale {
+  filter: saturate(200%) grayscale(1);
 }
 
 @media (width <= 375px) {
