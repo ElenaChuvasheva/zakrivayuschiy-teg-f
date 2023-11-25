@@ -179,9 +179,9 @@
 }
 
 .card__like-button {
+  width: 130px;
   padding-top: 12px;
   padding-bottom: 9px;
-  width: 130px;
 }
 
 .bordered-button {
@@ -189,20 +189,22 @@
   border: var(--border-style);
   box-shadow: none;
   font-family: var(--accent-font);
-  transition: box-shadow 0.5s ease-in-out;
   font-size: 14px;
   line-height: 0.9;
   background-color: var(--bg-color);
+  transition: box-shadow 0.5s ease-in-out;
 }
 
 .button__text {
   position: relative;
   z-index: 2;
+  display: block;
   transition: color 0.5s ease-in-out;
 }
 
 .card__like-button::after,
-.footer__button::after {
+.footer__button::after,
+.dialog__button::after {
   content: '';
   position: absolute;
   top: 0;
@@ -222,6 +224,7 @@
 
 .card__like-button:hover::after,
 .footer__button:hover::after,
+.dialog__button:hover::after,
 .card__icon-button:hover + .card__like-button::after {
   width: 100%;
 }
@@ -307,41 +310,69 @@
   animation: firework 0.3s ease-in alternate 2 0.3s;
 }
 
+.footer {
+  margin: 54px auto 102px;
+}
+
 .footer__button {
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 8px;
-  text-align: center;
-  padding: 15px 20px;
   max-width: 312px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  text-align: center;
 }
 
-.button-floppy {
+.button-save {
   z-index: 2;
   width: 28px;
   transition: color 0.5s linear;
 }
 
-.footer__button:hover .button-floppy {
+.footer__button:hover .button-save {
   color: var(--bg-color);
   background-blend-mode: difference;
 }
 
+.dialog {
+  border: var(--border-style);
+  padding: 30px 40px 32px 39px;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+}
 
-/* .floppy {
-  color: red;
-} */
+.dialog__header {
+  display: flex;
+  gap: 19px;
+  margin-bottom: 30px;
+}
 
-/* .footer__button:hover .floppy {
-  color: blue;
-} */
+.dialog__image {
+  flex-shrink: 0;
+  width: 39px;
+}
 
-.footer__button .button__text {
-  display: block;
+.dialog__text {
+  font-family: var(--accent-font), Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dialog__button {
+  width: 100%;
+  padding: 9px 0;
+  font-size: 14px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 @media (width <= 375px) {
