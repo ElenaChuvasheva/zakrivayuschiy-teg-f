@@ -339,10 +339,12 @@
 }
 
 .dialog {
+  opacity: 0.3;
   border: var(--border-style);
-  padding: 30px 40px 32px 39px;
+  padding: 31px clamp(32px, 41.465px - 0.657vw, 39px);
   color: var(--font-color);
   background-color: var(--bg-color);
+  max-width: clamp(341px, 335.366px + 1.502vw, 357px);
 }
 
 .dialog__header {
@@ -363,6 +365,7 @@
   font-style: normal;
   line-height: 1.5;
   text-transform: uppercase;
+  min-width: 234px;
 }
 
 .dialog__button {
@@ -378,5 +381,10 @@
 @media (width <= 375px) {
   .html-decor {
     font-size: clamp(2.5rem, -0.7727rem + 16.3636vw, 3.0625rem);
+  }
+
+  .dialog {
+    max-width: clamp(300px, 61.455px + 74.545vw, 341px);
+    padding: 31px clamp(20px, -38.182px + 18.182vw, 30px);
   }
 }
