@@ -213,10 +213,12 @@
 }
 
 .button__text {
+  color: var(--initial-mixing-color);
   position: relative;
   z-index: 2;
   display: block;
-  transition: color 0.5s ease-in-out;
+  /* transition: color 0.5s ease-in-out; */
+  mix-blend-mode: difference;
 }
 
 .bordered-button::after {
@@ -244,13 +246,6 @@
 .bordered-button:hover::after,
 .card__icon-button:hover + .card__like-button::after {
   inline-size: 100%;
-}
-
-.bordered-button:hover .button__text,
-.card__icon-button:hover + .bordered-button .button__text,
-.button-save:hover .button-save-image {
-  color: var(--bg-color);
-  background-blend-mode: difference;
 }
 
 .card__icon-button {
@@ -342,7 +337,9 @@
 
 .button-save-image {
   z-index: 2;
-  transition: color 0.5s linear;
+  mix-blend-mode: difference;
+  fill: var(--initial-mixing-color);
+  /* transition: color 0.5s linear; */
   inline-size: clamp(21px, 36.077px - 2.154vw, 28px);
 }
 
