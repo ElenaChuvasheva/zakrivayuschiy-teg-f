@@ -360,6 +360,7 @@
 .dialog__image {
   flex-shrink: 0;
   inline-size: 39px;
+  fill: var(--font-color);
 }
 
 .dialog__text {
