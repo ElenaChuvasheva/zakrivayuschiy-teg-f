@@ -111,7 +111,6 @@
 
 .card-list {
   display: grid;
-  /* gap: 48px; */
   gap: 49px;
 }
 
@@ -176,14 +175,17 @@
   line-height: 1.16667;
 }
 
-.card:has(img[class*="filter__"]) .image-wrapper {
+.card:not(:first-of-type) .image-wrapper {
     border-bottom: 4px solid var(--font-color);
 }
 
-.card:has(img[class*="filter__"]) .card__header {
+.card:not(:first-of-type) .card__header {
   padding-bottom: 4px;
 }
 
+.card:not(:first-of-type) .card__text {
+  padding-top: 24px;
+}
 
 .buttons {
   display: grid;
