@@ -197,8 +197,6 @@
 
 .card__like-button {
   inline-size: 130px;
-  padding-block-start: 12px;
-  padding-block-end: 9px;
 }
 
 .bordered-button {
