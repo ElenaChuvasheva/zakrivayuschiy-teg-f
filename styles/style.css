@@ -111,21 +111,18 @@
 
 .card-list {
   display: grid;
-  /* gap: 51px; */
-  gap: 50px;
+  gap: 49px;
 }
 
 .card {
-  padding-bottom: 27px;
-  outline: var(--border-style);
-  outline-offset: -2px;
+  padding-bottom: 25px;
   background-color: var(--bg-color);
+  border: var(--border-style);
 }
 
 .card__header {
-  border: var(--border-style);
-  border-bottom: none;
-  padding: 5px 10px 4px;
+  border-bottom: var(--border-style);
+  padding: 5px 10px 3px;
   font-size: 18px;
   line-height: 1.2;
   font-variation-settings: 'wght' var(--font-weight-bold);
@@ -133,9 +130,11 @@
 
 .image-wrapper {
   position: relative;
+  overflow: hidden;
 }
 
 .card__image {
+  display: block;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -168,10 +167,15 @@
 .card__text {
   display: grid;
   gap: 27px;
-  padding: 21px 29px 25px 27px;
+  padding: 25px 29px 25px 25px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16667;
+  border-top: var(--border-style);
+}
+
+.card:has(img[class*="filter__"]) .card__text {
+  border-top-width: 4px;
 }
 
 .buttons {
