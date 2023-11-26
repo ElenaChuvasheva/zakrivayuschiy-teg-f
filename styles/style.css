@@ -111,7 +111,7 @@
 
 .card-list {
   display: grid;
-  gap: 49px;
+  gap: 48px;
 }
 
 .card {
@@ -179,6 +179,11 @@
     border-bottom: var(--border-style);
     border-width: 4px;
 }
+
+.card:has(img[class*="filter__"]) .card__header {
+  padding-bottom: 4px;
+}
+
 
 .buttons {
   display: grid;
