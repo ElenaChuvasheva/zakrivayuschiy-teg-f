@@ -115,9 +115,9 @@
 }
 
 .card {
+  border: var(--border-style);
   padding-bottom: 25px;
   background-color: var(--bg-color);
-  border: var(--border-style);
 }
 
 .card__header {
@@ -131,8 +131,8 @@
 
 .image-wrapper {
   position: relative;
-  overflow: hidden;
   border-bottom: var(--border-style);
+  overflow: hidden;
 }
 
 .card__image {
@@ -176,8 +176,7 @@
 }
 
 .card:has(img[class*="filter__"]) .image-wrapper {
-    border-bottom: var(--border-style);
-    border-width: 4px;
+    border-bottom: 4px solid var(--font-color);
 }
 
 .card:has(img[class*="filter__"]) .card__header {
