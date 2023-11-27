@@ -124,7 +124,7 @@
 
 .card__header {
   border-block-end: var(--border-style);
-  padding: 5px 10px 4px;
+  padding: 5px 10px 3px;
   font-size: 18px;
   line-height: 1.2;
   font-variation-settings: 'wght' var(--font-weight-bold);
@@ -132,7 +132,7 @@
 
 .image-wrapper {
   position: relative;
-  border-block-end: 4px solid var(--font-color);
+  border-block-end: var(--border-style);
   overflow: hidden;
 }
 
@@ -170,7 +170,7 @@
 .card__text {
   display: grid;
   gap: 27px;
-  padding: 24px 27px 24px 25px;
+  padding: 27px 27px 25px 25px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16667;
@@ -180,14 +180,12 @@
   display: grid;
   grid-template-columns: auto auto;
   justify-content: end;
-  align-items: center;
   gap: 4px;
   padding-inline-end: 25px;
 }
 
 .card__like-button {
   inline-size: 130px;
-  height: 38px;
 }
 
 .like-icon {
@@ -242,8 +240,11 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
+  max-block-size: 38px;
 }
 
 .card__icon-button:focus-visible {
