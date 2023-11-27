@@ -124,7 +124,7 @@
 
 .card__header {
   border-block-end: var(--border-style);
-  padding: 5px 10px 3px;
+  padding: 5px 10px 4px;
   font-size: 18px;
   line-height: 1.2;
   font-variation-settings: 'wght' var(--font-weight-bold);
@@ -132,7 +132,7 @@
 
 .image-wrapper {
   position: relative;
-  border-block-end: var(--border-style);
+  border-block-end: 4px solid var(--font-color);
   overflow: hidden;
 }
 
@@ -170,22 +170,10 @@
 .card__text {
   display: grid;
   gap: 27px;
-  padding: 25px 27px 25px 25px;
+  padding: 24px 27px 25px 25px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.16667;
-}
-
-.card:not(:first-of-type) .image-wrapper {
-    border-block-end: 4px solid var(--font-color);
-}
-
-.card:not(:first-of-type) .card__header {
-  padding-block-end: 4px;
-}
-
-.card:not(:first-of-type) .card__text {
-  padding-block-start: 24px;
 }
 
 .buttons {
@@ -345,7 +333,7 @@
 
 .dialog {
   border: var(--border-style);
-  padding: 31px clamp(32px, 41.465px - 0.657vw, 39px);
+  padding: 31px clamp(32px, 42.817px - 0.751vw, 40px);
   color: var(--font-color);
   background-color: var(--bg-color);
   max-inline-size: clamp(341px, 335.366px + 1.502vw, 357px);
@@ -421,7 +409,7 @@
   }
 
   .dialog {
-    padding: 31px clamp(20px, -38.182px + 18.182vw, 30px);
+    padding: 31px clamp(20px, -96.364px + 36.364vw, 40px);
     max-inline-size: clamp(300px, 61.455px + 74.545vw, 341px);
   }
 }
