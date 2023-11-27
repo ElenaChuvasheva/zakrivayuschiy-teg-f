@@ -179,14 +179,17 @@
 .buttons {
   display: grid;
   grid-template-columns: auto auto;
-  grid-template-rows: 38px;
   justify-content: end;
   gap: 4px;
-  padding-inline-end: 27px;
+  padding-inline-end: 25px;
 }
 
 .card__like-button {
   inline-size: 130px;
+}
+
+.like-icon {
+  display: block;
 }
 
 .bordered-button {
