@@ -208,7 +208,6 @@
   z-index: 2;
   display: block;
   color: var(--initial-mixing-color);
-  /* transition: color 0.5s ease-in-out; */
   mix-blend-mode: difference;
 }
 
@@ -268,7 +267,6 @@
   z-index: 2;
   fill: var(--initial-mixing-color);
   mix-blend-mode: difference;
-  /* transition: color 0.5s linear; */
   inline-size: clamp(21px, 36.077px - 2.154vw, 28px);
 }
 
