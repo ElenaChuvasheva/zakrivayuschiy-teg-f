@@ -233,8 +233,7 @@
   box-shadow: 2px 2px var(--font-color);
 }
 
-.bordered-button:hover::after,
-.card__icon-button:hover + .card__like-button::after {
+.bordered-button:hover::after {
   inline-size: 100%;
 }
 
